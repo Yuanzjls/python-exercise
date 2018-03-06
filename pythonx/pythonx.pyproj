@@ -1,0 +1,65 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ab242734-cfea-425f-bbc8-aefe592c508c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>seri.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>pythonx</Name>
+    <RootNamespace>pythonx</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="filereadp.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fact_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mydict.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hello.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mydict2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pythonx.py" />
+    <Compile Include="screen.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="seri.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="student.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mydict_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestStudent.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
