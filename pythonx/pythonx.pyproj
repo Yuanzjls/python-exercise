@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ab242734-cfea-425f-bbc8-aefe592c508c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>oste.py</StartupFile>
+    <StartupFile>task_work.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -50,6 +50,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="mydict_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="task_master.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="task_work.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TestStudent.py">

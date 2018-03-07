@@ -1,31 +1,54 @@
-from multiprocessing import Process, Queue
-import os, time, random
+import time, threading
 
-# 写数据进程执行的代码:
-def write(q):
-    print('Process to write: %s' % os.getpid())
-    for value in ['A', 'B', 'C']:
-        print('Put %s to queue...' % value)
-        q.put(value)
-        time.sleep(random.random())
+# 假定这是你的银行存款:
+'''balance = 0
+lock = threading.Lock()
+#def change_it(n):
+    # 先存后取，结果应该为0:
+    global balance
+    lock.acquire()
+    balance = balance + n
+    balance = balance - n
 
-# 读数据进程执行的代码:
-def read(q):
-    print('Process to read: %s' % os.getpid())
-    while True:
-        value = q.get(True)
-        print('Get %s from queue.' % value)
 
-if __name__=='__main__':
-    # 父进程创建Queue，并传给各个子进程：
-    q = Queue()
-    pw = Process(target=write, args=(q,))
-    pr = Process(target=read, args=(q,))
-    # 启动子进程pw，写入:
-    pw.start()
-    # 启动子进程pr，读取:
-    pr.start()
-    # 等待pw结束:
-    pw.join()
-    # pr进程里是死循环，无法等待其结束，只能强行终止:
-   # pr.terminate()
+def run_thread(n):
+    for i in range(100000):
+        print(n)
+        change_it(n)
+
+t1 = threading.Thread(target=run_thread, args=(5,))
+t2 = threading.Thread(target=run_thread, args=(8,))
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+print(balance)'''
+
+
+
+
+
+
+import threading
+import time
+
+def run():
+
+    time.sleep(2)
+    print('当前线程的名字是： ', threading.current_thread().name)
+    time.sleep(2)
+
+if __name__ == '__main__':
+
+    start_time = time.time()
+
+    print('这是主线程：', threading.current_thread().name)
+    thread_list = []
+    for i in range(5):
+        t = threading.Thread(target=run)
+        thread_list.append(t)
+        t.setDaemon(True)
+        t.start()
+
+    print('主线程结束了！' , threading.current_thread().name)
+    print('一共用时：', time.time()-start_time)
