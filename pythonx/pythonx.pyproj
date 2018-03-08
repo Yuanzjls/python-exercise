@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ab242734-cfea-425f-bbc8-aefe592c508c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>task_work.py</StartupFile>
+    <StartupFile>regx.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -40,6 +40,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="pythonx.py" />
+    <Compile Include="regx.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="screen.py">
       <SubType>Code</SubType>
     </Compile>

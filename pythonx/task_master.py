@@ -35,7 +35,7 @@ def start():
     QueueManager.register('result_task_queue', callable=resulttq)
 
     # 绑定窗口，设置验证码
-    manager = QueueManager(address=('127.0.0.1', 500), authkey=b'abc')  # 第一个参数为地址和端口，第二个参数为验证码，防止别人骚扰
+    manager = QueueManager(address=('192.168.1.72', 500), authkey=b'abc')  # 第一个参数为地址和端口，第二个参数为验证码，防止别人骚扰
 
     # 启动管理
     manager.start()
@@ -47,15 +47,15 @@ def start():
     print('try post data')
     for x in range(10):
         n = random.randint(1, 1000000)
-        print('put %d' % n)
+        print('put task %d' % n)
         post.put(n)
 
     # 接受结果
-    print('try get result')
+    print('Try get result')
     for x in range(10):
         # timeout表示超时获取数的最长时间
         value = result.get(timeout=10)
-        print('get result', value)
+        print('get result: ', value)
 
     # 关闭管理器
     manager.shutdown()
