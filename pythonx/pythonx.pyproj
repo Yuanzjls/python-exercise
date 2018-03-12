@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ab242734-cfea-425f-bbc8-aefe592c508c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>regx.py</StartupFile>
+    <StartupFile>xmlex.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="baseex.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bmpinfo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="contentma.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="filereadp.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="fact_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hmacx.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="mydict.py">
@@ -37,6 +49,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="oste.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="passwordex.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pical.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="pythonx.py" />
@@ -65,6 +83,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="timeex.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="urllibex.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="xmlex.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
